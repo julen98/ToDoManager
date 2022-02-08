@@ -21,39 +21,11 @@ namespace Forms
         {
 
         }
-
-
-        private void bunifuAppBar1_IconClick(object sender, EventArgs e)
-        {
-
-        }
-        
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void Home_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void horafecha_Tick(object sender, EventArgs e)
-        {
-            lblhora.Text = DateTime.Now.ToString("HH:mm:ss");
-            lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy"); 
-        }
-
-        private void lblhora_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
             // Set the min and max size of sidebar
@@ -77,10 +49,21 @@ namespace Forms
                 }
             }
         }
-
         private void iconMenu_Click(object sender, EventArgs e)
         {
             sidebarTimer.Start();
+        }
+        private void Home_Click(object sender, EventArgs e)
+        {
+            calendarUserControl1.Hide();
+            homeUserControl1.Show();
+            homeUserControl1.BringToFront();
+        }
+        private void btnCalendar_Click(object sender, EventArgs e)
+        {
+            homeUserControl1.Hide();
+            calendarUserControl1.Show();
+            calendarUserControl1.BringToFront();
         }
     }
 }
