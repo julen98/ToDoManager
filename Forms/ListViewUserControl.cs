@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace Forms
 {
-    public partial class HomeUserControl : UserControl
+    public partial class ListViewUserControl : UserControl
     {
-        public HomeUserControl()
+        public ListViewUserControl()
         {
             InitializeComponent();
         }
 
-        private void horafecha_Tick(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            lblhora.Text = DateTime.Now.ToString("HH:mm:ss");
-            lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
         }
-        private void lblhora_Click(object sender, EventArgs e)
+
+        private void HomeUserControl_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }

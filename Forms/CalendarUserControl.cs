@@ -16,15 +16,5 @@ namespace Forms
         {
             InitializeComponent();
         }
-
-        private void horafecha_Tick(object sender, EventArgs e)
-        {
-            lblhora.Text = DateTime.Now.ToString("HH:mm:ss");
-            lblfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
-        }
-        private void lblhora_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

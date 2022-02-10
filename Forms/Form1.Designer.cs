@@ -32,20 +32,19 @@
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.labelMenu = new System.Windows.Forms.Label();
-            this.panelHome = new System.Windows.Forms.Panel();
-            this.panelCalendar = new System.Windows.Forms.Panel();
-            this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.iconMenu = new System.Windows.Forms.PictureBox();
+            this.panelHome = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
+            this.panelCalendar = new System.Windows.Forms.Panel();
             this.btnCalendar = new System.Windows.Forms.Button();
-            this.homeUserControl1 = new Forms.HomeUserControl();
-            this.calendarUserControl1 = new Forms.CalendarUserControl();
+            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.calendarUserControl = new Forms.CalendarUserControl();
+            this.listViewUserControl = new Forms.ListViewUserControl();
             this.sidebar.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMenu)).BeginInit();
             this.panelHome.SuspendLayout();
             this.panelCalendar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -76,36 +75,11 @@
             this.labelMenu.AutoSize = true;
             this.labelMenu.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.labelMenu.ForeColor = System.Drawing.Color.White;
-            this.labelMenu.Location = new System.Drawing.Point(48, 37);
+            this.labelMenu.Location = new System.Drawing.Point(48, 41);
             this.labelMenu.Name = "labelMenu";
-            this.labelMenu.Size = new System.Drawing.Size(62, 28);
+            this.labelMenu.Size = new System.Drawing.Size(50, 21);
             this.labelMenu.TabIndex = 3;
             this.labelMenu.Text = "Menu";
-            // 
-            // panelHome
-            // 
-            this.panelHome.Controls.Add(this.btnHome);
-            this.panelHome.Location = new System.Drawing.Point(3, 114);
-            this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(186, 51);
-            this.panelHome.TabIndex = 1;
-            // 
-            // panelCalendar
-            // 
-            this.panelCalendar.Controls.Add(this.btnCalendar);
-            this.panelCalendar.Location = new System.Drawing.Point(3, 171);
-            this.panelCalendar.Name = "panelCalendar";
-            this.panelCalendar.Size = new System.Drawing.Size(186, 51);
-            this.panelCalendar.TabIndex = 3;
-            // 
-            // horafecha
-            // 
-            this.horafecha.Enabled = true;
-            // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 10;
-            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
             // iconMenu
             // 
@@ -117,6 +91,14 @@
             this.iconMenu.TabIndex = 0;
             this.iconMenu.TabStop = false;
             this.iconMenu.Click += new System.EventHandler(this.iconMenu_Click);
+            // 
+            // panelHome
+            // 
+            this.panelHome.Controls.Add(this.btnHome);
+            this.panelHome.Location = new System.Drawing.Point(3, 114);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(186, 51);
+            this.panelHome.TabIndex = 1;
             // 
             // btnHome
             // 
@@ -134,6 +116,14 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.Home_Click);
             // 
+            // panelCalendar
+            // 
+            this.panelCalendar.Controls.Add(this.btnCalendar);
+            this.panelCalendar.Location = new System.Drawing.Point(3, 171);
+            this.panelCalendar.Name = "panelCalendar";
+            this.panelCalendar.Size = new System.Drawing.Size(186, 51);
+            this.panelCalendar.TabIndex = 3;
+            // 
             // btnCalendar
             // 
             this.btnCalendar.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -150,39 +140,49 @@
             this.btnCalendar.UseVisualStyleBackColor = false;
             this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
             // 
-            // homeUserControl1
+            // sidebarTimer
             // 
-            this.homeUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homeUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.homeUserControl1.Name = "homeUserControl1";
-            this.homeUserControl1.Size = new System.Drawing.Size(978, 495);
-            this.homeUserControl1.TabIndex = 3;
+            this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // calendarUserControl1
+            // calendarUserControl
             // 
-            this.calendarUserControl1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.calendarUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calendarUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.calendarUserControl1.Name = "calendarUserControl1";
-            this.calendarUserControl1.Size = new System.Drawing.Size(978, 495);
-            this.calendarUserControl1.TabIndex = 4;
+            this.calendarUserControl.AutoSize = true;
+            this.calendarUserControl.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.calendarUserControl.Location = new System.Drawing.Point(194, 0);
+            this.calendarUserControl.Margin = new System.Windows.Forms.Padding(2);
+            this.calendarUserControl.Name = "calendarUserControl";
+            this.calendarUserControl.Size = new System.Drawing.Size(784, 495);
+            this.calendarUserControl.TabIndex = 4;
+            this.calendarUserControl.Load += new System.EventHandler(this.calendarUserControl_Load);
+            // 
+            // listViewUserControl
+            // 
+            this.listViewUserControl.AutoSize = true;
+            this.listViewUserControl.Location = new System.Drawing.Point(194, 0);
+            this.listViewUserControl.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewUserControl.Name = "listViewUserControl";
+            this.listViewUserControl.Size = new System.Drawing.Size(784, 495);
+            this.listViewUserControl.TabIndex = 3;
+            this.listViewUserControl.Load += new System.EventHandler(this.homeUserControl1_Load);
             // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(978, 495);
             this.ControlBox = false;
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.calendarUserControl1);
-            this.Controls.Add(this.homeUserControl1);
+            this.Controls.Add(this.listViewUserControl);
+            this.Controls.Add(this.calendarUserControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.sidebar.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMenu)).EndInit();
             this.panelHome.ResumeLayout(false);
             this.panelCalendar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconMenu)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -194,12 +194,11 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelCalendar;
         private System.Windows.Forms.Button btnCalendar;
-        private System.Windows.Forms.Timer horafecha;
         private System.Windows.Forms.PictureBox iconMenu;
         private System.Windows.Forms.Label labelMenu;
         private System.Windows.Forms.Timer sidebarTimer;
-        private HomeUserControl homeUserControl1;
-        private CalendarUserControl calendarUserControl1;
+        private CalendarUserControl calendarUserControl;
+        private ListViewUserControl listViewUserControl;
     }
 }
 

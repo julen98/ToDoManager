@@ -13,6 +13,7 @@ namespace Forms
     public partial class Form1 : Form
     {
         bool sidebarExpand;
+
         public Form1()
         {
             InitializeComponent();
@@ -48,6 +49,8 @@ namespace Forms
                     sidebarTimer.Stop();
                 }
             }
+
+            
         }
         private void iconMenu_Click(object sender, EventArgs e)
         {
@@ -55,15 +58,24 @@ namespace Forms
         }
         private void Home_Click(object sender, EventArgs e)
         {
-            calendarUserControl1.Hide();
-            homeUserControl1.Show();
-            homeUserControl1.BringToFront();
+            calendarUserControl.Hide();
+            listViewUserControl.Show();
+            listViewUserControl.BringToFront();
         }
         private void btnCalendar_Click(object sender, EventArgs e)
         {
-            homeUserControl1.Hide();
-            calendarUserControl1.Show();
-            calendarUserControl1.BringToFront();
+            listViewUserControl.Hide();
+            calendarUserControl.Show();
+            calendarUserControl.BringToFront();
+        }
+
+        private void homeUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void calendarUserControl_Load(object sender, EventArgs e)
+        {
         }
     }
 }
