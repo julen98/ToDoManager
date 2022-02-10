@@ -30,11 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnOpenFile = new Forms.CustomButtons();
+            this.listView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.txtName = new CustomControls.RJControls.RJTextBox();
+            this.txtID = new CustomControls.RJControls.RJTextBox();
             this.btnRemove = new Forms.CustomButtons();
             this.btnAdd = new Forms.CustomButtons();
-            this.txtID = new CustomControls.RJControls.RJTextBox();
-            this.txtName = new CustomControls.RJControls.RJTextBox();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -42,82 +48,39 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // btnOpenFile
+            // listView
             // 
-            this.btnOpenFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
-            this.btnOpenFile.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
-            this.btnOpenFile.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnOpenFile.BorderRadius = 20;
-            this.btnOpenFile.BorderSize = 0;
-            this.btnOpenFile.FlatAppearance.BorderSize = 0;
-            this.btnOpenFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenFile.ForeColor = System.Drawing.Color.White;
-            this.btnOpenFile.Location = new System.Drawing.Point(542, 390);
-            this.btnOpenFile.Name = "btnOpenFile";
-            this.btnOpenFile.Size = new System.Drawing.Size(131, 46);
-            this.btnOpenFile.TabIndex = 24;
-            this.btnOpenFile.Text = "Open";
-            this.btnOpenFile.TextColor = System.Drawing.Color.White;
-            this.btnOpenFile.UseVisualStyleBackColor = false;
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView.FullRowSelect = true;
+            this.listView.GridLines = true;
+            this.listView.HideSelection = false;
+            this.listView.Location = new System.Drawing.Point(29, 127);
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(644, 300);
+            this.listView.TabIndex = 26;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Details;
+            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             // 
-            // btnRemove
+            // columnHeader1
             // 
-            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
-            this.btnRemove.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
-            this.btnRemove.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnRemove.BorderRadius = 20;
-            this.btnRemove.BorderSize = 0;
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(542, 59);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(131, 46);
-            this.btnRemove.TabIndex = 23;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.TextColor = System.Drawing.Color.White;
-            this.btnRemove.UseVisualStyleBackColor = false;
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 30;
             // 
-            // btnAdd
+            // columnHeader2
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
-            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
-            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAdd.BorderRadius = 20;
-            this.btnAdd.BorderSize = 0;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(405, 59);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(131, 46);
-            this.btnAdd.TabIndex = 22;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.TextColor = System.Drawing.Color.White;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.columnHeader2.Text = "Name";
+            this.columnHeader2.Width = 100;
             // 
-            // txtID
+            // contextMenuStrip2
             // 
-            this.txtID.BackColor = System.Drawing.SystemColors.Window;
-            this.txtID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
-            this.txtID.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(81)))), ((int)(((byte)(229)))));
-            this.txtID.BorderRadius = 15;
-            this.txtID.BorderSize = 2;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtID.Location = new System.Drawing.Point(29, 35);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtID.Multiline = false;
-            this.txtID.Name = "txtID";
-            this.txtID.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtID.PasswordChar = false;
-            this.txtID.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtID.PlaceholderText = "    ID: ";
-            this.txtID.Size = new System.Drawing.Size(250, 31);
-            this.txtID.TabIndex = 0;
-            this.txtID.Texts = "";
-            this.txtID.UnderlinedStyle = false;
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
             // txtName
             // 
@@ -141,13 +104,88 @@
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
             // 
+            // txtID
+            // 
+            this.txtID.BackColor = System.Drawing.SystemColors.Window;
+            this.txtID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
+            this.txtID.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(81)))), ((int)(((byte)(229)))));
+            this.txtID.BorderRadius = 15;
+            this.txtID.BorderSize = 2;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtID.Location = new System.Drawing.Point(29, 35);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Multiline = false;
+            this.txtID.Name = "txtID";
+            this.txtID.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtID.PasswordChar = false;
+            this.txtID.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtID.PlaceholderText = "    ID: ";
+            this.txtID.Size = new System.Drawing.Size(250, 31);
+            this.txtID.TabIndex = 0;
+            this.txtID.Texts = "";
+            this.txtID.UnderlinedStyle = false;
+            this.txtID._TextChanged += new System.EventHandler(this.txtID__TextChanged);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
+            this.btnRemove.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
+            this.btnRemove.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRemove.BorderRadius = 20;
+            this.btnRemove.BorderSize = 0;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(542, 59);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(131, 46);
+            this.btnRemove.TabIndex = 23;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.TextColor = System.Drawing.Color.White;
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
+            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
+            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAdd.BorderRadius = 20;
+            this.btnAdd.BorderSize = 0;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(405, 59);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(131, 46);
+            this.btnAdd.TabIndex = 22;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Creation Date";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Finish Date";
+            this.columnHeader4.Width = 150;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Done";
+            // 
             // ListViewUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.listView);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.btnOpenFile);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -162,8 +200,14 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private CustomButtons btnAdd;
         private CustomButtons btnRemove;
-        private CustomButtons btnOpenFile;
         private CustomControls.RJControls.RJTextBox txtID;
         private CustomControls.RJControls.RJTextBox txtName;
+        private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

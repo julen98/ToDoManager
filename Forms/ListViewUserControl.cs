@@ -29,6 +29,31 @@ namespace Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            ListViewItem eachRow = new ListViewItem(txtID.Texts);
+            ListViewItem.ListViewSubItem name = new ListViewItem.ListViewSubItem(eachRow, txtName.Texts);
+
+            eachRow.SubItems.Add(txtName.Texts);
+            listView.Items.Add(eachRow);
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if(listView.SelectedItems.Count > 0)
+                listView.Items.Remove(listView.SelectedItems[0]);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -31,6 +31,11 @@ namespace CustomControls.RJControls
         //Events
         public event EventHandler _TextChanged;
 
+        public void Clear()
+        {
+            Text = null;
+        }
+
         #endregion
 
         //-> Constructor
