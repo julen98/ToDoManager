@@ -33,7 +33,9 @@ namespace Forms
             ListViewItem.ListViewSubItem name = new ListViewItem.ListViewSubItem(eachRow, txtName.Texts);
 
             eachRow.SubItems.Add(txtName.Texts);
+            eachRow.SubItems.Add(DateTime.Now.ToString());
             listView.Items.Add(eachRow);
+            
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -52,9 +54,5 @@ namespace Forms
 
         }
 
-        private void listView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

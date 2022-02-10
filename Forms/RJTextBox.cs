@@ -33,7 +33,7 @@ namespace CustomControls.RJControls
 
         public void Clear()
         {
-            Text = null;
+            Text = "";
         }
 
         #endregion

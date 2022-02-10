@@ -9,12 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Calendar
+namespace Forms
 {
-    public partial class Form1 : Form
+    public partial class Calendar1 : Form
     {
         int month, year;
-        public Form1()
+        public Calendar1()
         {
             InitializeComponent();
         }
@@ -45,19 +45,19 @@ namespace Calendar
             year = now.Year;
 
             String month2 = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            label8.Text = month2+" , " + year;
+            label8.Text = month2 + " , " + year;
             DateTime startofthemonth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
 
             for (int i = 0; i <= dayoftheweek; i++)
             {
-                UserControlBlank ucblank = new UserControlBlank();
+                Calendar.UserControlBlank ucblank = new Calendar.UserControlBlank();
                 Daycontainer.Controls.Add(ucblank);
-            } 
+            }
             for (int i = 1; i <= days; i++)
             {
-                UserControlDay ucdays = new UserControlDay();
+                Calendar.UserControlDay ucdays = new Calendar.UserControlDay();
                 ucdays.days(i);
                 Daycontainer.Controls.Add(ucdays);
             }
@@ -81,12 +81,12 @@ namespace Calendar
 
             for (int i = 0; i <= dayoftheweek; i++)
             {
-                UserControlBlank ucblank = new UserControlBlank();
+                Calendar.UserControlBlank ucblank = new Calendar.UserControlBlank();
                 Daycontainer.Controls.Add(ucblank);
             }
             for (int i = 1; i <= days; i++)
             {
-                UserControlDay ucdays = new UserControlDay();
+                Calendar.UserControlDay ucdays = new Calendar.UserControlDay();
                 ucdays.days(i);
                 Daycontainer.Controls.Add(ucdays);
             }
@@ -107,12 +107,12 @@ namespace Calendar
 
             for (int i = 0; i <= dayoftheweek; i++)
             {
-                UserControlBlank ucblank = new UserControlBlank();
+                Calendar.UserControlBlank ucblank = new Calendar.UserControlBlank();
                 Daycontainer.Controls.Add(ucblank);
             }
             for (int i = 1; i <= days; i++)
             {
-                UserControlDay ucdays = new UserControlDay();
+                Calendar.UserControlDay ucdays = new Calendar.UserControlDay();
                 ucdays.days(i);
                 Daycontainer.Controls.Add(ucdays);
             }

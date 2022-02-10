@@ -91,20 +91,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalendarUserControl.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Calendar1.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CalendarUserControl.Designer.cs">
-      <DependentUpon>CalendarUserControl.cs</DependentUpon>
+    <Compile Include="Calendar1.Designer.cs">
+      <DependentUpon>Calendar1.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomButtons.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="ListViewUserControl.cs">
       <SubType>UserControl</SubType>
@@ -120,11 +120,23 @@
     <Compile Include="RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CalendarUserControl.resx">
-      <DependentUpon>CalendarUserControl.cs</DependentUpon>
+    <Compile Include="UserControlBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBlank.Designer.cs">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDay.Designer.cs">
+      <DependentUpon>UserControlDay.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Calendar1.resx">
+      <DependentUpon>Calendar1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListViewUserControl.resx">
       <DependentUpon>ListViewUserControl.cs</DependentUpon>
@@ -142,6 +154,12 @@
     </Compile>
     <EmbeddedResource Include="RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBlank.resx">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDay.resx">
+      <DependentUpon>UserControlDay.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

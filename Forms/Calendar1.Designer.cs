@@ -1,7 +1,7 @@
 ﻿
-namespace Calendar
+namespace Forms
 {
-    partial class Form1
+    partial class Calendar1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -44,6 +44,7 @@ namespace Calendar
             // 
             // Daycontainer
             // 
+            this.Daycontainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
             this.Daycontainer.Location = new System.Drawing.Point(11, 137);
             this.Daycontainer.Name = "Daycontainer";
             this.Daycontainer.Size = new System.Drawing.Size(1099, 512);
@@ -161,11 +162,11 @@ namespace Calendar
             this.label8.TabIndex = 9;
             this.label8.Text = "Month and Year";
             // 
-            // Form1
+            // Calendar1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1122, 690);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -179,9 +180,9 @@ namespace Calendar
             this.Controls.Add(this.btnprev);
             this.Controls.Add(this.Daycontainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Calendar1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Calendar1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
