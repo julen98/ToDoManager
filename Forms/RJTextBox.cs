@@ -31,10 +31,7 @@ namespace CustomControls.RJControls
         //Events
         public event EventHandler _TextChanged;
 
-        public void Clear()
-        {
-            Text = "";
-        }
+        
 
         #endregion
 
@@ -371,6 +368,7 @@ namespace CustomControls.RJControls
             this.Invalidate();
             SetPlaceholder();
         }
+
         ///::::+
         #endregion
     }

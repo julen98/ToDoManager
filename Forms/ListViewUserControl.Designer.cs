@@ -36,7 +36,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtName = new CustomControls.RJControls.RJTextBox();
-            this.txtID = new CustomControls.RJControls.RJTextBox();
             this.btnRemove = new Forms.CustomButtons();
             this.btnAdd = new Forms.CustomButtons();
             this.SuspendLayout();
@@ -48,19 +47,25 @@
             // 
             // listView
             // 
+            this.listView.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.listView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
             this.listView.FullRowSelect = true;
             this.listView.GridLines = true;
+            this.listView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(29, 127);
             this.listView.Name = "listView";
+            this.listView.OwnerDraw = true;
+            this.listView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listView.Size = new System.Drawing.Size(644, 300);
             this.listView.TabIndex = 26;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
+            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -68,13 +73,13 @@
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 150;
+            this.columnHeader2.Text = "Task";
+            this.columnHeader2.Width = 292;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Creation Date";
-            this.columnHeader3.Width = 150;
+            this.columnHeader3.Width = 292;
             // 
             // contextMenuStrip2
             // 
@@ -89,42 +94,19 @@
             this.txtName.BorderRadius = 15;
             this.txtName.BorderSize = 2;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtName.Location = new System.Drawing.Point(29, 74);
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.Location = new System.Drawing.Point(29, 68);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Multiline = false;
             this.txtName.Name = "txtName";
             this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtName.PasswordChar = false;
             this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtName.PlaceholderText = "    Nombre: ";
+            this.txtName.PlaceholderText = "    Task: ";
             this.txtName.Size = new System.Drawing.Size(250, 31);
             this.txtName.TabIndex = 25;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
-            // 
-            // txtID
-            // 
-            this.txtID.BackColor = System.Drawing.SystemColors.Window;
-            this.txtID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
-            this.txtID.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(81)))), ((int)(((byte)(229)))));
-            this.txtID.BorderRadius = 15;
-            this.txtID.BorderSize = 2;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtID.Location = new System.Drawing.Point(29, 35);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtID.Multiline = false;
-            this.txtID.Name = "txtID";
-            this.txtID.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtID.PasswordChar = false;
-            this.txtID.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtID.PlaceholderText = "    ID: ";
-            this.txtID.Size = new System.Drawing.Size(250, 31);
-            this.txtID.TabIndex = 0;
-            this.txtID.Texts = "";
-            this.txtID.UnderlinedStyle = false;
-            this.txtID._TextChanged += new System.EventHandler(this.txtID__TextChanged);
             // 
             // btnRemove
             // 
@@ -170,7 +152,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listView);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -185,7 +166,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private CustomButtons btnAdd;
         private CustomButtons btnRemove;
-        private CustomControls.RJControls.RJTextBox txtID;
         private CustomControls.RJControls.RJTextBox txtName;
         private System.Windows.Forms.ListView listView;
         private System.Windows.Forms.ColumnHeader columnHeader1;

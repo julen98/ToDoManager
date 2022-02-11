@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Calendar
 {
     public partial class UserControlDay : UserControl
     {
+        public static string static_day;
         public UserControlDay()
         {
             InitializeComponent();
@@ -20,6 +22,13 @@ namespace Calendar
         private void UserControlDay_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void UserControlDay_Click(object sender, EventArgs e)
+        {
+            static_day = label1.Text;
+            EventForm eventForm = new EventForm();
+            eventForm.Show();
         }
         public void days(int numday)
         {

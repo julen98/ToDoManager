@@ -13,6 +13,7 @@ namespace Forms
 {
     public partial class Calendar1 : Form
     {
+        public static int static_month, static_year;
         int month, year;
         public Calendar1()
         {
@@ -50,6 +51,9 @@ namespace Forms
             int days = DateTime.DaysInMonth(year, month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
 
+            static_month = month;
+            static_year = year;
+
             for (int i = 0; i <= dayoftheweek; i++)
             {
                 Calendar.UserControlBlank ucblank = new Calendar.UserControlBlank();
@@ -78,7 +82,8 @@ namespace Forms
             DateTime startofthemonth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
-
+            static_month = month;
+            static_year = year;
             for (int i = 0; i <= dayoftheweek; i++)
             {
                 Calendar.UserControlBlank ucblank = new Calendar.UserControlBlank();
@@ -104,7 +109,8 @@ namespace Forms
             DateTime startofthemonth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
-
+            static_month = month;
+            static_year = year;
             for (int i = 0; i <= dayoftheweek; i++)
             {
                 Calendar.UserControlBlank ucblank = new Calendar.UserControlBlank();

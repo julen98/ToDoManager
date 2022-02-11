@@ -157,7 +157,6 @@
             // Main
             // 
             this.ClientSize = new System.Drawing.Size(978, 495);
-            this.ControlBox = false;
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.listViewUserControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
