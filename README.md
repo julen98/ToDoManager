@@ -7,7 +7,7 @@ In this project our goal is to make a well optimized task manager, adapted to al
 ![image](https://github.com/julen98/ToDoManager/blob/master/calendar.png)
 ![image](https://github.com/julen98/ToDoManager/blob/master/home.png)
 
-License
+# License
 
 The MIT License (MIT)
 
@@ -30,3 +30,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+# Reference
+
+https://www.c-sharpcorner.com/UploadFile/7d3362/use-local-database-file-in-window-application-C-Sharp/
+https://rjcodeadvance.com/rounded-button-custom-controls-winform-c/
+https://rjcodeadvance.com/custom-text-box-custom-controls-winform-c/
