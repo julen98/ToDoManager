@@ -1,8 +1,8 @@
 # ToDoManager ☑️  ✅
 #This project has been made by 
 
-- 💻 ismail
-- 💻 julen
+- 💻 Ismail
+- 💻 Julen
 - 💻 Alex
 
 
@@ -17,7 +17,7 @@ In this project our goal is to make a well optimized task manager, adapted to al
 
 The MIT License (MIT)
 
-Copyright © 2022 Prisma, 
+Copyright © 2022 OceansDOTNET, 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
