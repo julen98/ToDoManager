@@ -1,8 +1,8 @@
 # ToDoManager
 #This project has been made by 
-  💻 ismail 
-  💻 julen  
-  💻 Alex
+💻 ismail 
+💻 julen  
+💻 Alex
 #In this project
 
 In this project our goal is to make a well optimized task manager, adapted to all kind of users, with big buttons for users with vision problems.
