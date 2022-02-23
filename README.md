@@ -3,9 +3,10 @@
 #In this project
 
 In this project our goal is to make a well optimized task manager, adapted to all kind of users, with big buttons for users with vision problems.
-
+![image](https://github.com/julen98/ToDoManager/blob/master/mockup.svg)
 ![image](https://github.com/julen98/ToDoManager/blob/master/calendar.png)
 ![image](https://github.com/julen98/ToDoManager/blob/master/home.png)
+
 License
 
 The MIT License (MIT)
