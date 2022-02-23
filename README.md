@@ -1,9 +1,9 @@
 # ToDoManager
 #This project has been made by 
 
-:- 💻 ismail
-:- 💻 julen
-:- 💻 Alex
+- 💻 ismail
+- 💻 julen
+- 💻 Alex
 
 
 #In this project
