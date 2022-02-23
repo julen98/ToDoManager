@@ -3,8 +3,8 @@
 #In this project
 
 In this project our goal is to make a well optimized task manager, adapted to all kind of users, with big buttons for users with vision problems.
-https://drive.google.com/file/d/1hy6TSyvudOV0QRLJRcC-z33GSA3_iMmn/view?usp=sharing
 
+![alt text](https://drive.google.com/file/d/1hy6TSyvudOV0QRLJRcC-z33GSA3_iMmn/view?usp=sharing)
 License
 
 The MIT License (MIT)
